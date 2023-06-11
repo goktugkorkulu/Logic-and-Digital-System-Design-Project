@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module telephone_conversation_design
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sim_1/new/telephone_conversation_simulation.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module telephone_conversation_simulation
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

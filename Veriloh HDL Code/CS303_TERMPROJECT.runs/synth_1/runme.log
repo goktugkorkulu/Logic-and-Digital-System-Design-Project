@@ -1,0 +1,455 @@
+
+*** Running vivado
+    with args -log telephone_conversation_design.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source telephone_conversation_design.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source telephone_conversation_design.tcl -notrace
+Command: synth_design -top telephone_conversation_design -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21040 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 336.301 ; gain = 99.996
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'telephone_conversation_design' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:23]
+	Parameter IDLE bound to: 3'b000 
+	Parameter RINGING bound to: 3'b001 
+	Parameter BUSY bound to: 3'b010 
+	Parameter REJECTED bound to: 3'b011 
+	Parameter CALLER bound to: 3'b100 
+	Parameter COST bound to: 3'b101 
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register counter_reg in module telephone_conversation_design. [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'telephone_conversation_design' (1#1) [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 390.570 ; gain = 154.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 390.570 ; gain = 154.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 390.570 ; gain = 154.266
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'telephone_conversation_design'
+INFO: [Synth 8-5546] ROM "cost" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ct5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ct5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ct5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ct5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sentMsg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'statusMsg_reg' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:90]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:95]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE4 |                           000001 |                              000
+                  iSTATE |                           100000 |                              001
+                 iSTATE1 |                           001000 |                              011
+                 iSTATE2 |                           000100 |                              100
+                 iSTATE3 |                           000010 |                              101
+*
+                 iSTATE0 |                           010000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'telephone_conversation_design'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'sentMsg_reg' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+WARNING: [Synth 8-327] inferring latch for variable 'sentMsg_reg' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+WARNING: [Synth 8-327] inferring latch for variable 'cost_reg' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:92]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 390.570 ; gain = 154.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     63 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module telephone_conversation_design 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     63 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[0]' (LD) to 'statusMsg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[1]' (LD) to 'statusMsg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[2]' (LD) to 'statusMsg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[3]' (LD) to 'statusMsg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[4]' (LD) to 'statusMsg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[6]' (LD) to 'statusMsg_reg[25]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[7]' (LD) to 'statusMsg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[8]' (LD) to 'statusMsg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[9]' (LD) to 'statusMsg_reg[19]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[10]' (LD) to 'statusMsg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[11]' (LD) to 'statusMsg_reg[12]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[12]' (LD) to 'statusMsg_reg[15]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[14]' (LD) to 'statusMsg_reg[18]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[15]' (LD) to 'statusMsg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[16]' (LD) to 'statusMsg_reg[23]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[18]' (LD) to 'statusMsg_reg[60]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[22]' (LD) to 'statusMsg_reg[43]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[23]' (LD) to 'statusMsg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[24]' (LD) to 'statusMsg_reg[30]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[26]' (LD) to 'statusMsg_reg[35]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[27]' (LD) to 'statusMsg_reg[33]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[31]' (LD) to 'statusMsg_reg[37]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[34]' (LD) to 'statusMsg_reg[48]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[36]' (LD) to 'statusMsg_reg[40]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[37]' (LD) to 'statusMsg_reg[39]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[38]' (LD) to 'statusMsg_reg[46]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[39]' (LD) to 'statusMsg_reg[45]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[40]' (LD) to 'statusMsg_reg[44]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[44]' (LD) to 'statusMsg_reg[49]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[45]' (LD) to 'statusMsg_reg[47]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[46]' (LD) to 'statusMsg_reg[54]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[47]' (LD) to 'statusMsg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[52]' (LD) to 'statusMsg_reg[53]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[53]' (LD) to 'statusMsg_reg[55]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\statusMsg_reg[54] )
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[55]' (LD) to 'statusMsg_reg[58]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[57]' (LD) to 'statusMsg_reg[62]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[58]' (LD) to 'statusMsg_reg[59]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[59]' (LD) to 'statusMsg_reg[61]'
+INFO: [Synth 8-3886] merging instance 'statusMsg_reg[61]' (LD) to 'statusMsg_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\statusMsg_reg[63] )
+WARNING: [Synth 8-3332] Sequential element (statusMsg_reg[63]) is unused and will be removed from module telephone_conversation_design.
+WARNING: [Synth 8-3332] Sequential element (statusMsg_reg[54]) is unused and will be removed from module telephone_conversation_design.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:92]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[63] with 1st driver pin 'sentMsg_reg[63]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[63] with 2nd driver pin 'sentMsg_reg[63]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[63] with 3rd driver pin 'sentMsg_reg[63]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[55] with 1st driver pin 'sentMsg_reg[55]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[55] with 2nd driver pin 'sentMsg_reg[55]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[55] with 3rd driver pin 'sentMsg_reg[55]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[62] with 1st driver pin 'sentMsg_reg[62]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[62] with 2nd driver pin 'sentMsg_reg[62]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[62] with 3rd driver pin 'sentMsg_reg[62]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[54] with 1st driver pin 'sentMsg_reg[54]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[54] with 2nd driver pin 'sentMsg_reg[54]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[54] with 3rd driver pin 'sentMsg_reg[54]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[61] with 1st driver pin 'sentMsg_reg[61]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[61] with 2nd driver pin 'sentMsg_reg[61]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[61] with 3rd driver pin 'sentMsg_reg[61]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[53] with 1st driver pin 'sentMsg_reg[53]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[53] with 2nd driver pin 'sentMsg_reg[53]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[53] with 3rd driver pin 'sentMsg_reg[53]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[60] with 1st driver pin 'sentMsg_reg[60]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[60] with 2nd driver pin 'sentMsg_reg[60]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[60] with 3rd driver pin 'sentMsg_reg[60]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[52] with 1st driver pin 'sentMsg_reg[52]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[52] with 2nd driver pin 'sentMsg_reg[52]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[52] with 3rd driver pin 'sentMsg_reg[52]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[59] with 1st driver pin 'sentMsg_reg[59]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[59] with 2nd driver pin 'sentMsg_reg[59]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[59] with 3rd driver pin 'sentMsg_reg[59]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[51] with 1st driver pin 'sentMsg_reg[51]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[51] with 2nd driver pin 'sentMsg_reg[51]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[51] with 3rd driver pin 'sentMsg_reg[51]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[58] with 1st driver pin 'sentMsg_reg[58]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[58] with 2nd driver pin 'sentMsg_reg[58]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[58] with 3rd driver pin 'sentMsg_reg[58]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[50] with 1st driver pin 'sentMsg_reg[50]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[50] with 2nd driver pin 'sentMsg_reg[50]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[50] with 3rd driver pin 'sentMsg_reg[50]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[57] with 1st driver pin 'sentMsg_reg[57]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[57] with 2nd driver pin 'sentMsg_reg[57]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[57] with 3rd driver pin 'sentMsg_reg[57]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[49] with 1st driver pin 'sentMsg_reg[49]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[49] with 2nd driver pin 'sentMsg_reg[49]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[49] with 3rd driver pin 'sentMsg_reg[49]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[56] with 1st driver pin 'sentMsg_reg[56]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[56] with 2nd driver pin 'sentMsg_reg[56]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[56] with 3rd driver pin 'sentMsg_reg[56]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[48] with 1st driver pin 'sentMsg_reg[48]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[48] with 2nd driver pin 'sentMsg_reg[48]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[48] with 3rd driver pin 'sentMsg_reg[48]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[47] with 1st driver pin 'sentMsg_reg[47]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[47] with 2nd driver pin 'sentMsg_reg[47]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[47] with 3rd driver pin 'sentMsg_reg[47]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[46] with 1st driver pin 'sentMsg_reg[46]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[46] with 2nd driver pin 'sentMsg_reg[46]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[46] with 3rd driver pin 'sentMsg_reg[46]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[45] with 1st driver pin 'sentMsg_reg[45]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[45] with 2nd driver pin 'sentMsg_reg[45]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[45] with 3rd driver pin 'sentMsg_reg[45]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[44] with 1st driver pin 'sentMsg_reg[44]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[44] with 2nd driver pin 'sentMsg_reg[44]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[44] with 3rd driver pin 'sentMsg_reg[44]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[43] with 1st driver pin 'sentMsg_reg[43]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[43] with 2nd driver pin 'sentMsg_reg[43]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[43] with 3rd driver pin 'sentMsg_reg[43]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[42] with 1st driver pin 'sentMsg_reg[42]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[42] with 2nd driver pin 'sentMsg_reg[42]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[42] with 3rd driver pin 'sentMsg_reg[42]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[41] with 1st driver pin 'sentMsg_reg[41]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[41] with 2nd driver pin 'sentMsg_reg[41]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[41] with 3rd driver pin 'sentMsg_reg[41]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[40] with 1st driver pin 'sentMsg_reg[40]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[40] with 2nd driver pin 'sentMsg_reg[40]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[40] with 3rd driver pin 'sentMsg_reg[40]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[39] with 1st driver pin 'sentMsg_reg[39]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[39] with 2nd driver pin 'sentMsg_reg[39]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[39] with 3rd driver pin 'sentMsg_reg[39]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[38] with 1st driver pin 'sentMsg_reg[38]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[38] with 2nd driver pin 'sentMsg_reg[38]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[38] with 3rd driver pin 'sentMsg_reg[38]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[37] with 1st driver pin 'sentMsg_reg[37]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[37] with 2nd driver pin 'sentMsg_reg[37]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[37] with 3rd driver pin 'sentMsg_reg[37]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[36] with 1st driver pin 'sentMsg_reg[36]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[36] with 2nd driver pin 'sentMsg_reg[36]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[36] with 3rd driver pin 'sentMsg_reg[36]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[35] with 1st driver pin 'sentMsg_reg[35]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[35] with 2nd driver pin 'sentMsg_reg[35]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[35] with 3rd driver pin 'sentMsg_reg[35]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[34] with 1st driver pin 'sentMsg_reg[34]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[34] with 2nd driver pin 'sentMsg_reg[34]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[34] with 3rd driver pin 'sentMsg_reg[34]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[33] with 1st driver pin 'sentMsg_reg[33]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[33] with 2nd driver pin 'sentMsg_reg[33]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[33] with 3rd driver pin 'sentMsg_reg[33]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[32] with 1st driver pin 'sentMsg_reg[32]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[32] with 2nd driver pin 'sentMsg_reg[32]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[32] with 3rd driver pin 'sentMsg_reg[32]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[31] with 1st driver pin 'sentMsg_reg[31]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[31] with 2nd driver pin 'sentMsg_reg[31]__0/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:169]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[31] with 3rd driver pin 'sentMsg_reg[31]/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:477]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sentMsg_OBUF[30] with 1st driver pin 'sentMsg_reg[30]__1/Q' [C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.srcs/sources_1/new/telephone_conversation_design.v:91]
+INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       96|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     2|
+|4     |LUT2   |     3|
+|5     |LUT3   |    34|
+|6     |LUT4   |    69|
+|7     |LUT5   |    18|
+|8     |LUT6   |     9|
+|9     |FDCE   |     8|
+|10    |FDPE   |     1|
+|11    |FDRE   |   100|
+|12    |LD     |   125|
+|13    |LDC    |    64|
+|14    |IBUF   |    14|
+|15    |OBUF   |   128|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   594|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 257 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 545.086 ; gain = 308.781
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 219 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 189 instances were transformed.
+  LD => LDCE: 125 instances
+  LDC => LDCE: 64 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 11 Warnings, 101 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 648.973 ; gain = 425.805
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/goktu/Desktop/CS_303_LABS/CS303_TERMPROJECT/CS303_TERMPROJECT.runs/synth_1/telephone_conversation_design.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file telephone_conversation_design_utilization_synth.rpt -pb telephone_conversation_design_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 648.973 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  3 00:58:44 2022...

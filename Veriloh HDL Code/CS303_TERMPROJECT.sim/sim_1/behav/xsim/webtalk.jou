@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jan  4 11:35:41 2022
+# Process ID: 12976
+# Current directory: C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.sim/sim_1/behav/xsim/xsim.dir/telephone_conversation_simulation_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/goktu/Desktop/goktugkorkulu_korkulu_goktug_termProject_cs303/goktugkorkulu_korkulu_goktug_termProject_cs303/CS303_TERMPROJECT/CS303_TERMPROJECT.sim/sim_1/behav/xsim/xsim.dir/telephone_conversation_simulation_behav/webtalk/xsim_webtalk.tcl -notrace
